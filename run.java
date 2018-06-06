@@ -100,14 +100,18 @@ public class run {
         // }
 
         //Maps of the Hashmatique
-        hashmatique hash = new hashmatique();
-        String [] titles = {"Human", "Slave to the Grind","I ain't marchin Anymore", "Zero Visibility"};
-        String [] lyrics = {"I'm only human after all","You're just a slave to the grind!","Call it love or call it reason, but I ain't marchin' anymore","A storm brews in her eyes, love is ready to die, we are not brave, we are not wise, we stand at the edge of paradise"};
-        HashMap<String, String> eriksList = hash.tracklist(titles,lyrics);
-        String humanlyrics = hash.getLyrics("Human", eriksList);
-        System.out.println(humanlyrics);
-        System.out.println("Whole Album:");
-        hash.printAlbum(eriksList);
-        
+        // hashmatique hash = new hashmatique();
+        // String [] titles = {"Human", "Slave to the Grind","I ain't marchin Anymore", "Zero Visibility"};
+        // String [] lyrics = {"I'm only human after all","You're just a slave to the grind!","Call it love or call it reason, but I ain't marchin' anymore","A storm brews in her eyes, love is ready to die, we are not brave, we are not wise, we stand at the edge of paradise"};
+        // HashMap<String, String> eriksList = hash.tracklist(titles,lyrics);
+        // String humanlyrics = hash.getLyrics("Human", eriksList);
+        // System.out.println(humanlyrics);
+        // System.out.println("Whole Album:");
+        // hash.printAlbum(eriksList);
+
+        //List of Exceptions
+        ListOfExceptions except = new ListOfExceptions();
+        ArrayList<Object> erikList = except.defaultList();
+        ArrayList<Object> myExceptions = except.throwCast(erikList);        
     }
 }
