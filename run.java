@@ -82,7 +82,7 @@ public class run {
         //4
         System.out.println("------------Puzzle 4------------");
         int [] arr1 = puzzle.randomInRange(10,55,100);
-        System.out.println(""); //uncomment system prints to see output
+        System.out.println(""); //uncomment system prints in randomInRange to see output
         //5
         System.out.println("------------Puzzle 5------------");
         String randomWord = puzzle.randWords(5);

@@ -68,7 +68,7 @@ public class puzzling {
         }
         // System.out.println(sort);
         // System.out.println("Sorted: ");
-        // Collections.sort(sort);
+        Collections.sort(sort);
         // System.out.println(sort);
         // System.out.println("");
         // System.out.print("Minimum: ");
