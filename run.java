@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Random;
+import java.util.HashMap;
 public class run {
     public static void main(String[] args) {
         // //Pythagorean
@@ -41,61 +42,72 @@ public class run {
 
         //Puzzling
         //1
-        puzzling puzzle = new puzzling();
-        int [] list = {3,5,1,2,7,9,8,13,25,32};
-        ArrayList<Object> test = new ArrayList<Object>();
-        test = puzzle.greaterThan(list,10);
-        System.out.println("------------Puzzle 1------------");
-        System.out.println("Old List:");
-        for(int i = 0; i < list.length; i++){
-            System.out.print(list[i]);
-            System.out.print(" ");
-        }
-        System.out.println("");
-        System.out.println("New List:");
-        System.out.println(test);
-        test.clear();
-        //2
-        System.out.println("------------Puzzle 2------------");
-        String [] strlist = new String []{"Nancy","Jinichi","Fujibayashi","Momochi","Ishikawa"};
-        System.out.println("Original Array: ");
-        for(int i = 0; i < strlist.length; i++){
-            System.out.print(strlist[i]);
-            System.out.print(" ");
-        }
-        System.out.println("");
-        System.out.println("Shuffled Array: ");
-        int cutoff = 5;
-        test = puzzle.shufflePrint(strlist,cutoff);
-        System.out.println("");
-        System.out.print("Longer than ");
-        System.out.print(cutoff);
-        System.out.print(" characters: ");
-        System.out.println("");
-        System.out.println(test);
-        //3
-        System.out.println("------------Puzzle 3------------");
-        String alpha = "abcdedfghijklmnopqrstuvwxyz";
-        System.out.println("Your first and last characters are: ");
-        char [] first_last = puzzle.alphaShufflePrint(alpha);
-        System.out.println(first_last);
-        //4
-        System.out.println("------------Puzzle 4------------");
-        int [] arr1 = puzzle.randomInRange(10,55,100);
-        System.out.println(""); //uncomment system prints in randomInRange to see output
-        //5
-        System.out.println("------------Puzzle 5------------");
-        String randomWord = puzzle.randWords(5);
-        System.out.println(randomWord);
-        //6
-        System.out.println("------------Puzzle 6------------");
-        String [] words = puzzle.randWords(5,10);
-        System.out.println("");
-        System.out.println("Random Words: ");
-        System.out.println("");
-        for(int i = 0; i < words.length; i++){
-            System.out.print(words[i]);
-            System.out.print(" ");
-        }
+        // puzzling puzzle = new puzzling();
+        // int [] list = {3,5,1,2,7,9,8,13,25,32};
+        // ArrayList<Object> test = new ArrayList<Object>();
+        // test = puzzle.greaterThan(list,10);
+        // System.out.println("------------Puzzle 1------------");
+        // System.out.println("Old List:");
+        // for(int i = 0; i < list.length; i++){
+        //     System.out.print(list[i]);
+        //     System.out.print(" ");
+        // }
+        // System.out.println("");
+        // System.out.println("New List:");
+        // System.out.println(test);
+        // test.clear();
+        // //2
+        // System.out.println("------------Puzzle 2------------");
+        // String [] strlist = new String []{"Nancy","Jinichi","Fujibayashi","Momochi","Ishikawa"};
+        // System.out.println("Original Array: ");
+        // for(int i = 0; i < strlist.length; i++){
+        //     System.out.print(strlist[i]);
+        //     System.out.print(" ");
+        // }
+        // System.out.println("");
+        // System.out.println("Shuffled Array: ");
+        // int cutoff = 5;
+        // test = puzzle.shufflePrint(strlist,cutoff);
+        // System.out.println("");
+        // System.out.print("Longer than ");
+        // System.out.print(cutoff);
+        // System.out.print(" characters: ");
+        // System.out.println("");
+        // System.out.println(test);
+        // //3
+        // System.out.println("------------Puzzle 3------------");
+        // String alpha = "abcdedfghijklmnopqrstuvwxyz";
+        // System.out.println("Your first and last characters are: ");
+        // char [] first_last = puzzle.alphaShufflePrint(alpha);
+        // System.out.println(first_last);
+        // //4
+        // System.out.println("------------Puzzle 4------------");
+        // int [] arr1 = puzzle.randomInRange(10,55,100);
+        // System.out.println(""); //uncomment system prints in randomInRange to see output
+        // //5
+        // System.out.println("------------Puzzle 5------------");
+        // String randomWord = puzzle.randWords(5);
+        // System.out.println(randomWord);
+        // //6
+        // System.out.println("------------Puzzle 6------------");
+        // String [] words = puzzle.randWords(5,10);
+        // System.out.println("");
+        // System.out.println("Random Words: ");
+        // System.ou.println("");
+        // for(int i = 0; i < words.length; i++){
+        //     System.out.print(words[i]);
+        //     System.out.print(" ");
+        // }
+
+        //Maps of the Hashmatique
+        hashmatique hash = new hashmatique();
+        String [] titles = {"Human", "Slave to the Grind","I ain't marchin Anymore", "Zero Visibility"};
+        String [] lyrics = {"I'm only human after all","You're just a slave to the grind!","Call it love or call it reason, but I ain't marchin' anymore","A storm brews in her eyes, love is ready to die, we are not brave, we are not wise, we stand at the edge of paradise"};
+        HashMap<String, String> eriksList = hash.tracklist(titles,lyrics);
+        String humanlyrics = hash.getLyrics("Human", eriksList);
+        System.out.println(humanlyrics);
+        System.out.println("Whole Album:");
+        hash.printAlbum(eriksList);
+        
     }
 }
